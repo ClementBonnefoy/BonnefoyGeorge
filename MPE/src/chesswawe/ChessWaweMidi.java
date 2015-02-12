@@ -8,6 +8,9 @@ import javax.sound.midi.MidiSystem;
 import javax.sound.midi.Sequence;
 import javax.sound.midi.Track;
 
+import chesswawe.piece.AbstractMusicalPiece;
+import chesswawe.piece.BasicMusicalPiece;
+
 import base.Case;
 import base.Piece;
 
@@ -32,9 +35,9 @@ public class ChessWaweMidi {
 		knightsTrack=sequence.createTrack();
 	}
 
-	public void addKey(int time,IMusicalPiece piece,Case c){
+	public void addKey(int time,AbstractMusicalPiece piece,Case c){
 
-		if(piece.isInitialCase(c))
+		if(piece.isInitialCase(c)) //si une piece est a sa case initiale, on ne fait aucun son
 			return;
 
 		Track t=null;

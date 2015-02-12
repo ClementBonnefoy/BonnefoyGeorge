@@ -1,5 +1,6 @@
-package georgepoubelle;
+package base;
 import java.util.ArrayList;
+
 
 
 /**
@@ -37,8 +38,8 @@ public class AbstractChessBoard<T> {
 	 * @param coordinate : la coordonnee
 	 * @return
 	 */
-	public T getSquare(ChessCoordinate coordinate){
-		return board.get(coordinate.getColumn()-1).get(coordinate.getRank()-1);
+	public T getSquare(Case coordinate){
+		return board.get(coordinate.getFile().getNum()).get(coordinate.getRank().getNum());
 	}
 	
 	/**
@@ -46,8 +47,8 @@ public class AbstractChessBoard<T> {
 	 * @param coordinate
 	 * @param val
 	 */
-	public void setSquare(ChessCoordinate coordinate,T val){
-		board.get(coordinate.getColumn()-1).set(coordinate.getRank(), val);
+	public void setSquare(Case coordinate,T val){
+		board.get(coordinate.getFile().getNum()).set(coordinate.getRank().getNum(), val);
 	}
 	
 	/**
@@ -55,9 +56,11 @@ public class AbstractChessBoard<T> {
 	 * @param coordinate : La coordonnee echiqueenne de la case
 	 * @return
 	 */
-	public boolean isEmpty(ChessCoordinate coordinate){
+	public boolean isEmpty(Case coordinate){
 		return this.getSquare(coordinate)==null;
 	}
+	
+	
 
 
 }
