@@ -5,18 +5,23 @@ import base.Color;
 import base.Piece;
 import base.Rank;
 import base.Type;
+import base.interfaces.IAdvancedPiece;
 
-public abstract class AbstractMusicalPiece{
+public abstract class AbstractChessWawePiece implements IAdvancedPiece{
 	
 	protected Piece piece;
 	private Case initialCase;
 	
-	public AbstractMusicalPiece (Piece piece,Case initialCase){
+	public AbstractChessWawePiece (Piece piece,Case initialCase){
 		super();
 		this.piece=piece;
 		this.initialCase=initialCase;
 	}
 	
+	@Override
+	public Piece getPiece(){
+		return piece;
+	}
 	
 	public Type getType(){
 		return piece.getType();

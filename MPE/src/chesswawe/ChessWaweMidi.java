@@ -8,8 +8,8 @@ import javax.sound.midi.MidiSystem;
 import javax.sound.midi.Sequence;
 import javax.sound.midi.Track;
 
-import chesswawe.piece.AbstractMusicalPiece;
-import chesswawe.piece.BasicMusicalPiece;
+import chesswawe.piece.AbstractChessWawePiece;
+import chesswawe.piece.BasicChessWawePiece;
 
 import base.Case;
 import base.Piece;
@@ -35,7 +35,7 @@ public class ChessWaweMidi {
 		knightsTrack=sequence.createTrack();
 	}
 
-	public void addKey(int time,AbstractMusicalPiece piece,Case c){
+	public void addKey(int time,AbstractChessWawePiece piece,Case c){
 
 		if(piece.isInitialCase(c)) //si une piece est a sa case initiale, on ne fait aucun son
 			return;
@@ -86,10 +86,10 @@ public class ChessWaweMidi {
 		ChessWaweMidi cwm=new ChessWaweMidi();
 
 
-		cwm.addKey(0,new BasicMusicalPiece(Piece.b, Case.B1) , Case.A1);
-		cwm.addKey(1,new BasicMusicalPiece(Piece.b, Case.B1) , Case.A1);
-		cwm.addKey(2,new BasicMusicalPiece(Piece.b, Case.B1) , Case.A1);
-		cwm.addKey(3,new BasicMusicalPiece(Piece.b, Case.B1) , Case.A1);
+		cwm.addKey(0,new BasicChessWawePiece(Piece.b, Case.B1) , Case.A1);
+		cwm.addKey(1,new BasicChessWawePiece(Piece.b, Case.B1) , Case.A1);
+		cwm.addKey(2,new BasicChessWawePiece(Piece.b, Case.B1) , Case.A1);
+		cwm.addKey(3,new BasicChessWawePiece(Piece.b, Case.B1) , Case.A1);
 
 
 		cwm.saveMidi("test.mid");

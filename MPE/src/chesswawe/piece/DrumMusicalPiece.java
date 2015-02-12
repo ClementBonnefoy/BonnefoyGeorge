@@ -4,7 +4,7 @@ import base.Case;
 import base.Piece;
 import base.Rank;
 
-public class DrumMusicalPiece extends AbstractMusicalPiece {
+public class DrumMusicalPiece extends AbstractChessWawePiece {
 
 	private static int[] scale = 
 		{ 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 };

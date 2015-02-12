@@ -4,12 +4,12 @@ import base.Case;
 import base.Piece;
 import base.Rank;
 
-public class BasicMusicalPiece extends AbstractMusicalPiece {
+public class BasicChessWawePiece extends AbstractChessWawePiece {
 
 	private static int[] scale = 
 		{ 64 , 66 , 69 , 69 , 71 , 73 , 76 , 78 , 81 }; //gamme pentatonique (chinese style!)
 
-	public BasicMusicalPiece(Piece piece,Case initialCase) {
+	public BasicChessWawePiece(Piece piece,Case initialCase) {
 		super(piece,initialCase);
 	}
 
