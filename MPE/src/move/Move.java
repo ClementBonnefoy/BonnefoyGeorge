@@ -38,6 +38,10 @@ public class Move {
 		return queenSideCastling;
 	}
 	
+	public boolean isPromotion(){
+		return promotion!=null;
+	}
+	
 	public Piece getPromotion() {
 		return promotion;
 	}

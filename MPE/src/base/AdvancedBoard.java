@@ -147,9 +147,9 @@ public class AdvancedBoard {
 		
 		move(mv.getfrom(),mv.getTo()); //tout autre deplacement
 		
-		Piece promotion=mv.getPromotion();
-		if(promotion!=null){ //en cas de promotion
-			setSquare(mv.getTo(),fact.createPiece(promotion,null));
+		
+		if(mv.isPromotion()){ //en cas de promotion
+			setSquare(mv.getTo(),fact.createPiece(mv.getPromotion(),null));
 		}
 		
 	}
